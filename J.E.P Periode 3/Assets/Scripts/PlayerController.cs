@@ -14,6 +14,24 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetButtonDown("Button 1"))
+        {
+            print("Q");
+        }
+
+        if(Input.GetButtonDown("Button 2"))
+        {
+            print("W");
+        }
+
+        if(Input.GetButtonDown("Button 3"))
+        {
+            print("E");
+        }
+
+        if(Input.GetButtonDown("Button 4"))
+        {
+            print("R");
+        }
     }
 }
