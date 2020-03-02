@@ -25,7 +25,7 @@ public class FishMove : MonoBehaviour
          angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 180;
          transform.localRotation = Quaternion.Euler( 0, angulo, 0);
      }
-     
+     //lerp 
      // Update is called once per frame
      void Update () {
  
