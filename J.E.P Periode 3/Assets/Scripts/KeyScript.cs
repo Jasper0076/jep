@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class KeyScript : MonoBehaviour
 {
-    public GameObject nearestBeat;
+    public int lives;
     public float distance;
-    public string keyName;
     public float score;
     public float multiplier;
     public float failRange;
+    public string keyName;
+    public GameObject nearestBeat;
+    public GameObject winScreen;
+    public GameObject failScreen;
     public ScoreKeeper scoreKeeper;
     // Start is called before the first frame update
     void Start()
@@ -49,6 +52,10 @@ public class KeyScript : MonoBehaviour
         multiplier += score / 100f;
         if (score < failRange)
         {
+            if (lives == 0)
+            {
+                winScreen.gameObject.SetActive(true);
+            }
             multiplier = multiplier * -1;
         }
         if (multiplier < 1f)
