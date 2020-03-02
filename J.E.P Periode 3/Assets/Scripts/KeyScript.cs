@@ -7,7 +7,6 @@ public class KeyScript : MonoBehaviour
     public GameObject nearestBeat;
     public float distance;
     public string keyName;
-    public float threshold;
     public float score;
     public float multiplier;
     public float failRange;
@@ -30,7 +29,7 @@ public class KeyScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Beat" && nearestBeat == null)
-        {
+        {   
             nearestBeat = other.transform.gameObject;
         }
     }
