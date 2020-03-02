@@ -38,6 +38,7 @@ public class KeyScript : MonoBehaviour
         if (nearestBeat != null)
         {
             distance = Vector3.Distance(transform.position, nearestBeat.transform.position);
+            Destroy(nearestBeat);
             nearestBeat = null;
         }
     }
