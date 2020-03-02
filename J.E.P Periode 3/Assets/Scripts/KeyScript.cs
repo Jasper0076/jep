@@ -54,7 +54,7 @@ public class KeyScript : MonoBehaviour
         {
             if (lives == 0)
             {
-                winScreen.gameObject.SetActive(true);
+                failScreen.gameObject.SetActive(true);
             }
             multiplier = multiplier * -1;
         }

@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOU WIN!!
+  m_Text: YOU SUCK!
 --- !u!222 &96919863
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 563977670}
   - component: {fileID: 563977669}
   m_Layer: 5
-  m_Name: WinScreen
+  m_Name: FailScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
