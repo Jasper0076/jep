@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f43ecc7a4bcf740bf4d3138a9935b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 0
+  maxVelocity: 0.05
   xMax: 20
   zMax: 15
   xMin: 0
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f43ecc7a4bcf740bf4d3138a9935b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 0
+  maxVelocity: 0.02
   xMax: 20
   zMax: 15
   xMin: 0
