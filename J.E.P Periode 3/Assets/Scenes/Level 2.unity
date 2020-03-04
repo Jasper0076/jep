@@ -340,10 +340,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxVelocity: 0.05
-  xMax: 20
-  zMax: 15
-  xMin: 0
-  zMin: -15
+  xMinMax: {x: 0, y: 0}
+  zMinMax: {x: 0, y: 0}
+  moveSpeed: 0
+  targetPos: {x: 0, y: 0, z: 0}
 --- !u!95 &1462294244
 Animator:
   serializedVersion: 3
@@ -456,10 +456,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxVelocity: 0.02
-  xMax: 20
-  zMax: 15
-  xMin: 0
-  zMin: -15
+  xMinMax: {x: -20, y: 20}
+  zMinMax: {x: -20, y: 20}
+  moveSpeed: 0
+  targetPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &1570123640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5305,6 +5305,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5394089348624699273, guid: e936b9a2dcd0864448aaeabd0d109418,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d5ee8ef5a54f094aa916bf6ad891432, type: 2}
     - target: {fileID: 5973868372451687253, guid: e936b9a2dcd0864448aaeabd0d109418,
         type: 3}
       propertyPath: m_Name
