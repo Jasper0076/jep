@@ -339,11 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f43ecc7a4bcf740bf4d3138a9935b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 0.05
+  maxVelocity: 0
   xMinMax: {x: 0, y: 0}
   zMinMax: {x: 0, y: 0}
   moveSpeed: 0
   targetPos: {x: 0, y: 0, z: 0}
+  rotTime: 0
+  rotTo: {fileID: 0}
 --- !u!95 &1462294244
 Animator:
   serializedVersion: 3
@@ -383,27 +385,27 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9
+      value: 1.57
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 2.7209401e-11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 6.2138894e-10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000006221578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
@@ -418,7 +420,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
@@ -455,11 +457,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f43ecc7a4bcf740bf4d3138a9935b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 0.02
+  maxVelocity: 0
   xMinMax: {x: -20, y: 20}
   zMinMax: {x: -20, y: 20}
-  moveSpeed: 0
+  moveSpeed: 3
   targetPos: {x: 0, y: 0, z: 0}
+  rotTime: 1.4
+  rotTo: {fileID: 0}
 --- !u!1001 &1570123640
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,19 +12,26 @@ public class FishMove : MonoBehaviour
     public float moveSpeed;
     public Vector3 targetPos;
     private float targetReachedDistance = 0.1f;
-
-    //slerp  from toRotation 
-    // Update is called once per frame
-    void Update() {
+    public float rotTime;
+    public Transform rotTo;
+    private void Start()
+    {
+        targetPos = GetRandomPos();
+    }
+    void Update()
+    {
         if(Vector3.Distance(transform.position, targetPos) < targetReachedDistance)
         {
             targetPos = GetRandomPos();
+            //rotTo = targetPos;        rip
         }
+        transform.rotation = Quaternion.Slerp(transform.rotation,rotTo.rotation , rotTime);
 
-        // Hier even lerpen, en klaar.
-        // Lerpen van cur rot, naar de richting van targetPos.
+
 
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
+        //moved nog vooruit, probeer: transform.Translate(Vector3.targetPos*Time.deltaTime*moveSpeed);
+                                                                //---------
     }
 
     Vector3 GetRandomPos()
