@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FishMove : MonoBehaviour
 {
+    public Vector2 swimHeight;
     public Vector2 xMinMax;
     public Vector2 zMinMax;
     public float moveSpeed;
     public float rotTime;
-    public float swimHeight;
     public float targetReachedDistance = 0.1f;
     public Vector3 targetPos;
     public Quaternion rotTo;
@@ -36,6 +36,6 @@ public class FishMove : MonoBehaviour
 
     Vector3 GetRandomPos()
     {
-        return new Vector3(Random.Range(xMinMax.x, xMinMax.y), swimHeight, Random.Range(zMinMax.x, zMinMax.y));
+        return new Vector3(Random.Range(xMinMax.x, xMinMax.y), Random.Range(swimHeight.x,swimHeight.y), Random.Range(zMinMax.x, zMinMax.y));
     }
 }
