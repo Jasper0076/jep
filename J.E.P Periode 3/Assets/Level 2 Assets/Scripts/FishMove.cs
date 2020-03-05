@@ -4,38 +4,38 @@ using UnityEngine;
 
 public class FishMove : MonoBehaviour
 {
-    public float maxVelocity;
-
-
     public Vector2 xMinMax;
     public Vector2 zMinMax;
     public float moveSpeed;
-    public Vector3 targetPos;
-    private float targetReachedDistance = 0.1f;
     public float rotTime;
-    public Transform rotTo;
+    public float swimHeight;
+    public float targetReachedDistance = 0.1f;
+    public Vector3 targetPos;
+    public Quaternion rotTo;
+    public float afstand;
     private void Start()
     {
         targetPos = GetRandomPos();
     }
     void Update()
     {
-        if(Vector3.Distance(transform.position, targetPos) < targetReachedDistance)
+        if (Vector3.Distance(transform.position, targetPos) < targetReachedDistance)
         {
             targetPos = GetRandomPos();
-            //rotTo = targetPos;        rip
         }
-        transform.rotation = Quaternion.Slerp(transform.rotation,rotTo.rotation , rotTime);
-
-
-
+       /// else if (Vector3.Distance(transform.position, targetPos)> targetReachedDistance)
+        //{
+           /// (Vector3.Distance(transform.position, targetPos) / 10);
+        //}
+        rotTo = Quaternion.FromToRotation(Vector3.forward, targetPos - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation,rotTo , rotTime * Time.deltaTime);
+        
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
-        //moved nog vooruit, probeer: transform.Translate(Vector3.targetPos*Time.deltaTime*moveSpeed);
-                                                                //---------
+
     }
 
     Vector3 GetRandomPos()
     {
-        return new Vector3(Random.Range(xMinMax.x, xMinMax.y), 0, Random.Range(zMinMax.x, zMinMax.y));
+        return new Vector3(Random.Range(xMinMax.x, xMinMax.y), swimHeight, Random.Range(zMinMax.x, zMinMax.y));
     }
 }

@@ -339,13 +339,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f43ecc7a4bcf740bf4d3138a9935b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 0
   xMinMax: {x: 0, y: 0}
   zMinMax: {x: 0, y: 0}
   moveSpeed: 0
-  targetPos: {x: 0, y: 0, z: 0}
   rotTime: 0
-  rotTo: {fileID: 0}
+  swimHeight: 0
+  targetReachedDistance: 0.1
+  targetPos: {x: 0, y: 0, z: 0}
+  rotTo: {x: 0, y: 0, z: 0, w: 0}
+  afstand: 0
 --- !u!95 &1462294244
 Animator:
   serializedVersion: 3
@@ -372,10 +374,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5178661895559278292, guid: b1e7704ea772cd342a426d8b30453ca0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -8687930037020855540, guid: 562fba9d28ab2734383ea04f60d06991,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.97
+      value: 3.11
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
@@ -385,7 +393,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.57
+      value: -7.98
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
@@ -395,7 +403,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
@@ -405,7 +413,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
@@ -420,12 +428,27 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: b1e7704ea772cd342a426d8b30453ca0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: b1e7704ea772cd342a426d8b30453ca0,
         type: 3}
@@ -457,13 +480,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f43ecc7a4bcf740bf4d3138a9935b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 0
   xMinMax: {x: -20, y: 20}
   zMinMax: {x: -20, y: 20}
   moveSpeed: 3
-  targetPos: {x: 0, y: 0, z: 0}
   rotTime: 1.4
-  rotTo: {fileID: 0}
+  swimHeight: 10
+  targetReachedDistance: 1
+  targetPos: {x: 0, y: 0, z: 0}
+  rotTo: {x: 0, y: 0, z: 0, w: 0}
+  afstand: 0
 --- !u!1001 &1570123640
 PrefabInstance:
   m_ObjectHideFlags: 0
