@@ -26,11 +26,7 @@ public class KeyScript : MonoBehaviour
             AddScore();
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        getBeat(other.gameObject);
-    }
-    public void getBeat(GameObject beat)
+    private void OnTriggerStay(Collider beat)
     {
         if (beat.gameObject.tag == "Beat" && nearestBeat == null)
         {   
