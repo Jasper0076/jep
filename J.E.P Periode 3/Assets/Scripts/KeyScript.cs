@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class KeyScript : MonoBehaviour
 {
-    public int lives;
     public float distance;
     public float score;
     public float multiplier;
     public float failRange;
     public string keyName;
     public GameObject nearestBeat;
-    public GameObject winScreen;
-    public GameObject failScreen;
     public ScoreKeeper scoreKeeper;
     // Start is called before the first frame update
     void Start()
@@ -31,9 +28,13 @@ public class KeyScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Beat" && nearestBeat == null)
+        getBeat(other.gameObject);
+    }
+    public void getBeat(GameObject beat)
+    {
+        if (beat.gameObject.tag == "Beat" && nearestBeat == null)
         {   
-            nearestBeat = other.transform.gameObject;
+            nearestBeat = beat.transform.gameObject;
         }
     }
     public void CalcDistance()
@@ -52,10 +53,7 @@ public class KeyScript : MonoBehaviour
         multiplier += score / 100f;
         if (score < failRange)
         {
-            if (lives == 0)
-            {
-                failScreen.gameObject.SetActive(true);
-            }
+            scoreKeeper.lives -= 1;
             multiplier = multiplier * -1;
         }
         if (multiplier < 1f)
@@ -68,5 +66,6 @@ public class KeyScript : MonoBehaviour
         }
         score = score * multiplier;
         scoreKeeper.score += score;
+
     }
 }

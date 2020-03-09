@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public void Start()
+    {
+        GetComponent<AudioSource>().Play();
+    }
     public void ToOverworld()
     {
         SceneManager.LoadScene("Overworld");
