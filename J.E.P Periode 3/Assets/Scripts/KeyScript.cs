@@ -26,7 +26,7 @@ public class KeyScript : MonoBehaviour
             AddScore();
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         getBeat(other.gameObject);
     }
@@ -66,6 +66,5 @@ public class KeyScript : MonoBehaviour
         }
         score = score * multiplier;
         scoreKeeper.score += score;
-
     }
 }

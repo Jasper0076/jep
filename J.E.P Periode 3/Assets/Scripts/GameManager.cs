@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioSource song;
     public void Start()
     {
-        GetComponent<AudioSource>().Play();
+        song = GetComponent<AudioSource>();
+        song.volume = 0.5f;
+        song.Play();
+
     }
     public void ToOverworld()
     {
