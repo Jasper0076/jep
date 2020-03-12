@@ -6,12 +6,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public AudioSource song;
+    public float startTrackTime;
     public void Start()
     {
+        StartCoroutine(StartTrack());
+    }
+
+    IEnumerator StartTrack()
+    {
+        yield return new WaitForSeconds(startTrackTime);
         song = GetComponent<AudioSource>();
         song.volume = 0.5f;
         song.Play();
-
     }
     public void ToOverworld()
     {

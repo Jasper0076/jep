@@ -11,10 +11,15 @@ public class BeatBlockScript : MonoBehaviour
     {
         speed = bpm / -60f * Time.deltaTime;
     }
-
     // Update is called once per frame
     void Update()
     {
         transform.Translate(0, 0, speed);
+    }
+
+    public IEnumerator TestWait()
+    {
+        yield return new WaitForSeconds(1);
+        print("Ik heb een seconden gewacht!");
     }
 }

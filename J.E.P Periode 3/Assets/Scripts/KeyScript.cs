@@ -25,14 +25,19 @@ public class KeyScript : MonoBehaviour
             CalcDistance();
             AddScore();
         }
-    }
-    private void OnTriggerStay(Collider beat)
-    {
-        if (beat.gameObject.tag == "Beat" && nearestBeat == null)
-        {   
-            nearestBeat = beat.transform.gameObject;
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 100f))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            if (hit.transform.gameObject.tag == "Beat" && nearestBeat == null)
+            {
+                nearestBeat = hit.transform.gameObject;
+            }
         }
+
     }
+
     public void CalcDistance()
     {
         if (nearestBeat != null)
