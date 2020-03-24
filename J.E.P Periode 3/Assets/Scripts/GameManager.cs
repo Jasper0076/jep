@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public float startTrackTime;
     public void Start()
     {
-        //Time.timeScale = 0;
+        Time.timeScale = 0;
     }
 
     IEnumerator StartTrack()
