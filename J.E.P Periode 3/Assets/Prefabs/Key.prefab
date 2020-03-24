@@ -41,12 +41,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d63867876febfb4dae919f5d1856eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nearestBeat: {fileID: 0}
   distance: 0
-  keyName: 
   score: 0
   multiplier: 0
-  failRange: 20
+  failRange: 10
+  keyName: 
+  nearestBeat: {fileID: 0}
   scoreKeeper: {fileID: 0}
 --- !u!1001 &8852292173073798229
 PrefabInstance:
@@ -138,7 +138,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 1cfaaed0a347c5c4e90fea6b4f2becd2,
         type: 3}
       propertyPath: m_TagString
-      value: Beat
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cfaaed0a347c5c4e90fea6b4f2becd2, type: 3}

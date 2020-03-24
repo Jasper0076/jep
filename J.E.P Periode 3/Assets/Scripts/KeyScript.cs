@@ -52,7 +52,7 @@ public class KeyScript : MonoBehaviour
     {
         score = 100f - distance;
         multiplier += score / 100f;
-        if (score < failRange)
+        if (distance > failRange)
         {
             scoreKeeper.lives -= 1;
             multiplier = multiplier * -1;
