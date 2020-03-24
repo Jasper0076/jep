@@ -11,22 +11,15 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
     }
-
-    IEnumerator StartTrack()
+    public void StartButton()
     {
-        yield return new WaitForSeconds(startTrackTime);
         if(SceneManager.GetActiveScene().name != "Overworld")
         { 
+        Time.timeScale = 1;
         song = GetComponent<AudioSource>();
         song.volume = 0.5f;
         song.Play();
         }
-    }
-
-    public void StartButton()
-    {
-        Time.timeScale = 1;
-        StartCoroutine(StartTrack());
     }
     public void ToOverworld()
     {
