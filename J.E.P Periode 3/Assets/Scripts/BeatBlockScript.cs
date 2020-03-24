@@ -14,5 +14,10 @@ public class BeatBlockScript : MonoBehaviour
     void Update()
     {
         transform.Translate(0, 0, speed * Time.deltaTime);
+
+        if(transform.position.z <= -1f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
