@@ -14,7 +14,7 @@ public class KeyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreKeeper = GameObject.Find("Scoretext").GetComponent<ScoreKeeper>();
+        scoreKeeper = GameObject.Find("ScoreText").GetComponent<ScoreKeeper>();
     }
 
     // Update is called once per frame
