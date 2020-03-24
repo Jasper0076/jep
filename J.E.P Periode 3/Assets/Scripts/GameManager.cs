@@ -15,9 +15,12 @@ public class GameManager : MonoBehaviour
     IEnumerator StartTrack()
     {
         yield return new WaitForSeconds(startTrackTime);
+        if(SceneManager.GetActiveScene().name != "Overworld")
+        { 
         song = GetComponent<AudioSource>();
         song.volume = 0.5f;
         song.Play();
+        }
     }
     public void ToOverworld()
     {
