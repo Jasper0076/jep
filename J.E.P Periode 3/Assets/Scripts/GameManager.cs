@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public float startTrackTime;
     public void Start()
     {
-        StartCoroutine(StartTrack());
+        //Time.timeScale = 0;
     }
 
     IEnumerator StartTrack()
@@ -21,6 +21,12 @@ public class GameManager : MonoBehaviour
         song.volume = 0.5f;
         song.Play();
         }
+    }
+
+    public void StartButton()
+    {
+        Time.timeScale = 1;
+        StartCoroutine(StartTrack());
     }
     public void ToOverworld()
     {

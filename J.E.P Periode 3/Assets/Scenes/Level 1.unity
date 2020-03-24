@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 414919778}
   - component: {fileID: 414919777}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: StartScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
