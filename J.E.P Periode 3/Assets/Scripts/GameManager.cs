@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public AudioSource song;
-    public float startTrackTime;
+    public GameObject startScreen;
     public void Start()
     {
         Time.timeScale = 0;
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
         if(SceneManager.GetActiveScene().name != "Overworld")
         { 
         Time.timeScale = 1;
+        startScreen.SetActive(false);
         song = GetComponent<AudioSource>();
         song.volume = 0.5f;
         song.Play();

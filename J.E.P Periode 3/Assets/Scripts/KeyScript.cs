@@ -20,7 +20,7 @@ public class KeyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown(keyName) && nearestBeat != null)
+        if (Input.GetButtonDown(keyName) && nearestBeat != null && Time.timeScale == 1)
         {
             CalcDistance();
             AddScore();
@@ -29,6 +29,7 @@ public class KeyScript : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 100f))
         {
+
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             if (hit.transform.gameObject.tag == "Beat" && nearestBeat == null)
             {
