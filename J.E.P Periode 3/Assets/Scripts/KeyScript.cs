@@ -39,10 +39,9 @@ public class KeyScript : MonoBehaviour
                 nearestBeat = hit.transform.gameObject;
             }
 
-            if (hit.transform.gameObject.GetComponent<BeatBlockScript>().finalBlock == true && nearestBeat == null)
+            if (hit.transform.gameObject.GetComponent<BeatBlockScript>().finalBlock == true)
             {
                 finalBeat = true;
-                nearestBeat = hit.transform.gameObject;
             }
         }
 
