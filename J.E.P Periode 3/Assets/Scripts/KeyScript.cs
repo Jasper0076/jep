@@ -12,10 +12,12 @@ public class KeyScript : MonoBehaviour
     public bool finalBeat;
     public GameObject nearestBeat;
     public ScoreKeeper scoreKeeper;
+    public Multiplier multiplierS; 
     // Start is called before the first frame update
     void Start()
     {
         scoreKeeper = GameObject.Find("ScoreText").GetComponent<ScoreKeeper>();
+        multiplierS = GameObject.Find("MultiplierText").GetComponent<Multiplier>();
     }
 
     // Update is called once per frame
@@ -63,7 +65,7 @@ public class KeyScript : MonoBehaviour
         if (distance > failRange)
         {
             scoreKeeper.lives -= 1;
-            multiplier = multiplier * -1;
+            multiplierS.multiplier = multiplier * -1;
         }
         if (multiplier < 1f)
         {
