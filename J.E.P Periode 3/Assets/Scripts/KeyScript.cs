@@ -53,33 +53,27 @@ public class KeyScript : MonoBehaviour
         if (nearestBeat != null)
         {
             distance = Vector3.Distance(transform.position, nearestBeat.transform.position);
-            Destroy(nearestBeat);
-            nearestBeat = null;
         }
     }
 
     public void AddScore()
     {
         score = 100f - distance;
-        multiplier += score / 100f;
+        multiplierS.multiplier += score / 100f;
+
         if (distance > failRange)
         {
             scoreKeeper.lives -= 1;
-            multiplierS.multiplier = multiplier * -1;
+            multiplierS.multiplier = 1;
         }
-        if (multiplier < 1f)
-        {
-            multiplier = 1f;
-        }
-        if (multiplier > 10f)
-        {
-            multiplier = 10f;
-        }
-        score = score * multiplier;
+        
+        score = score * multiplierS.multiplier;
         scoreKeeper.score += score;
         if(finalBeat == true)
         {
             scoreKeeper.Win();
         }
+        Destroy(nearestBeat);
+        nearestBeat = null;
     }
 }

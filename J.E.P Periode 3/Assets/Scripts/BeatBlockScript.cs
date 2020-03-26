@@ -7,9 +7,13 @@ public class BeatBlockScript : MonoBehaviour
     public float speed;
     public ScoreKeeper scoreKeeper;
     public bool finalBlock;
+    public Multiplier multiplierS;
+    public int buffer;
     // Start is called before the first frame update
     void Start()
     {
+        multiplierS = GameObject.Find("MultiplierText").GetComponent<Multiplier>();
+        buffer = -2;
         scoreKeeper = GameObject.Find("ScoreText").GetComponent<ScoreKeeper>();
         speed = speed * -1;
     }
@@ -18,13 +22,14 @@ public class BeatBlockScript : MonoBehaviour
     {
         transform.Translate(0, 0, speed * Time.deltaTime);
 
-        if(transform.position.z <= -2f)
+        if(transform.position.z <= buffer)
         {
             scoreKeeper.lives -= 1;
             if(finalBlock == true && scoreKeeper.lives > 0)
             {
                 scoreKeeper.Win();
             }
+            multiplierS.multiplier = 1;
             Destroy(gameObject);
         }
     }

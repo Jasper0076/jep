@@ -15,6 +15,14 @@ public class Multiplier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (multiplier < 1f)
+        {
+            multiplier = 1f;
+        }
+        if (multiplier > 10f)
+        {
+            multiplier = 10f;
+        }
         GetComponent<Text>().text = multiplier.ToString("0");
     }
 }
