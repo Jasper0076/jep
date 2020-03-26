@@ -35,6 +35,11 @@ public class KeyScript : MonoBehaviour
             {
                 nearestBeat = hit.transform.gameObject;
             }
+
+            if (hit.transform.gameObject.GetComponent<BeatBlockScript>().finalBlock == true)
+            {
+                scoreKeeper.Win();
+            }
         }
 
     }

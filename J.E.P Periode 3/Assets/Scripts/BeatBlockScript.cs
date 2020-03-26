@@ -6,6 +6,7 @@ public class BeatBlockScript : MonoBehaviour
 {
     public float speed;
     public ScoreKeeper scoreKeeper;
+    public bool finalBlock;
     // Start is called before the first frame update
     void Start()
     {

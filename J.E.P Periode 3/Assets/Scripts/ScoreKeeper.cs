@@ -21,10 +21,22 @@ public class ScoreKeeper : MonoBehaviour
     {
         if(lives <= 0)
         {
-            failScreen.SetActive(true);
-            Time.timeScale = 0;
-            song.Stop();
+            Fail();
         }
         GetComponent<Text>().text = score.ToString("0");
+    }
+
+    public void Fail()
+    {
+        failScreen.SetActive(true);
+        Time.timeScale = 0;
+        song.Stop();
+    }
+
+    public void Win()
+    {
+        winScreen.SetActive(true);
+        Time.timeScale = 0;
+        song.Stop();
     }
 }
