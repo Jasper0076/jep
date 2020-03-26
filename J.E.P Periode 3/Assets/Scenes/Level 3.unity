@@ -4471,7 +4471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -29211,6 +29211,11 @@ PrefabInstance:
       propertyPath: buffer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3317563495554312137, guid: ebe6337cef8b5ca4bbd5888286f02716,
+        type: 3}
+      propertyPath: finalBlock
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -873266000326202369, guid: ebe6337cef8b5ca4bbd5888286f02716,
         type: 3}
       propertyPath: m_Constraints
@@ -36463,7 +36468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -38669,6 +38674,11 @@ PrefabInstance:
     - target: {fileID: -3317563495554312137, guid: ebe6337cef8b5ca4bbd5888286f02716,
         type: 3}
       propertyPath: buffer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3317563495554312137, guid: ebe6337cef8b5ca4bbd5888286f02716,
+        type: 3}
+      propertyPath: finalBlock
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -873266000326202369, guid: ebe6337cef8b5ca4bbd5888286f02716,
