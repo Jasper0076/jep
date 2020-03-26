@@ -23,6 +23,6 @@ public class Multiplier : MonoBehaviour
         {
             multiplier = 10f;
         }
-        GetComponent<Text>().text = multiplier.ToString("0");
+        GetComponent<Text>().text = "X " + multiplier.ToString("0");
     }
 }

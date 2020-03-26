@@ -8060,7 +8060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &563977668
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10469,7 +10469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.054, y: 0.087000005}
   m_AnchorMax: {x: 0.21955702, y: 0.1907213}
-  m_AnchoredPosition: {x: 0.6500244, y: 0.80000305}
+  m_AnchoredPosition: {x: 0.6500244, y: 0.7999878}
   m_SizeDelta: {x: -0.19999695, y: -0.70000076}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &720079300
@@ -13583,10 +13583,6 @@ PrefabInstance:
       propertyPath: keyName
       value: Button 4
       objectReference: {fileID: 0}
-    - target: {fileID: 406893892, guid: 74b88a4a692dacb4d87b6ee5550f0593, type: 3}
-      propertyPath: failRange
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 718400840461159772, guid: 74b88a4a692dacb4d87b6ee5550f0593,
         type: 3}
       propertyPath: m_Name
@@ -15655,10 +15651,6 @@ PrefabInstance:
     - target: {fileID: 406893892, guid: 74b88a4a692dacb4d87b6ee5550f0593, type: 3}
       propertyPath: keyName
       value: Button 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 406893892, guid: 74b88a4a692dacb4d87b6ee5550f0593, type: 3}
-      propertyPath: failRange
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 718400840461159772, guid: 74b88a4a692dacb4d87b6ee5550f0593,
         type: 3}
@@ -19309,10 +19301,6 @@ PrefabInstance:
     - target: {fileID: 406893892, guid: 74b88a4a692dacb4d87b6ee5550f0593, type: 3}
       propertyPath: keyName
       value: Button 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 406893892, guid: 74b88a4a692dacb4d87b6ee5550f0593, type: 3}
-      propertyPath: failRange
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 718400840461159772, guid: 74b88a4a692dacb4d87b6ee5550f0593,
         type: 3}
@@ -29044,10 +29032,6 @@ PrefabInstance:
     - target: {fileID: 406893892, guid: 74b88a4a692dacb4d87b6ee5550f0593, type: 3}
       propertyPath: threshold
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 406893892, guid: 74b88a4a692dacb4d87b6ee5550f0593, type: 3}
-      propertyPath: failRange
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 406893892, guid: 74b88a4a692dacb4d87b6ee5550f0593, type: 3}
       propertyPath: nearestBeat

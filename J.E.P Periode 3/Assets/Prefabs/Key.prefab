@@ -31,10 +31,12 @@ MonoBehaviour:
   distance: 0
   score: 0
   multiplier: 0
-  failRange: 10
+  failRange: 5
   keyName: 
+  finalBeat: 0
   nearestBeat: {fileID: 0}
   scoreKeeper: {fileID: 0}
+  multiplierS: {fileID: 0}
 --- !u!1001 &8852292173073798229
 PrefabInstance:
   m_ObjectHideFlags: 0
