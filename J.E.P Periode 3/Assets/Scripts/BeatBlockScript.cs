@@ -5,9 +5,11 @@ using UnityEngine;
 public class BeatBlockScript : MonoBehaviour
 {
     public float speed;
+    public ScoreKeeper scoreKeeper;
     // Start is called before the first frame update
     void Start()
     {
+        scoreKeeper = GameObject.Find("ScoreText").GetComponent<ScoreKeeper>();
         speed = speed * -1;
     }
     // Update is called once per frame
@@ -15,8 +17,9 @@ public class BeatBlockScript : MonoBehaviour
     {
         transform.Translate(0, 0, speed * Time.deltaTime);
 
-        if(transform.position.z <= -1f)
+        if(transform.position.z <= -2f)
         {
+            scoreKeeper.lives -= 1;
             Destroy(gameObject);
         }
     }
