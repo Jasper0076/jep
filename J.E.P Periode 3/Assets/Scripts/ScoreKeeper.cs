@@ -9,6 +9,7 @@ public class ScoreKeeper : MonoBehaviour
     public int lives;
     public GameObject winScreen;
     public GameObject failScreen;
+    public AudioSource song;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,8 @@ public class ScoreKeeper : MonoBehaviour
         if(lives <= 0)
         {
             failScreen.SetActive(true);
+            Time.timeScale = 0;
+            song.Stop();
         }
         GetComponent<Text>().text = score.ToString("0");
     }

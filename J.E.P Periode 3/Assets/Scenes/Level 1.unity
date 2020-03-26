@@ -4619,7 +4619,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &321052222
 PrefabInstance:
@@ -5936,7 +5936,7 @@ Transform:
   - {fileID: 601186356}
   - {fileID: 117435576}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &405437024 stripped
 Transform:
@@ -16046,6 +16046,7 @@ MonoBehaviour:
   lives: 3
   winScreen: {fileID: 0}
   failScreen: {fileID: 563977667}
+  song: {fileID: 1384500631}
 --- !u!1001 &1209636953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18366,7 +18367,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1385468139 stripped
 Transform:
