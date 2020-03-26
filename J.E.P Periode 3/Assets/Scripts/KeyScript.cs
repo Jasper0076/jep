@@ -9,6 +9,7 @@ public class KeyScript : MonoBehaviour
     public float multiplier;
     public float failRange;
     public string keyName;
+    public bool finalBeat;
     public GameObject nearestBeat;
     public ScoreKeeper scoreKeeper;
     // Start is called before the first frame update
@@ -36,9 +37,10 @@ public class KeyScript : MonoBehaviour
                 nearestBeat = hit.transform.gameObject;
             }
 
-            if (hit.transform.gameObject.GetComponent<BeatBlockScript>().finalBlock == true)
+            if (hit.transform.gameObject.GetComponent<BeatBlockScript>().finalBlock == true && nearestBeat == null)
             {
-                scoreKeeper.Win();
+                finalBeat = true;
+                nearestBeat = hit.transform.gameObject;
             }
         }
 
@@ -73,5 +75,9 @@ public class KeyScript : MonoBehaviour
         }
         score = score * multiplier;
         scoreKeeper.score += score;
+        if(finalBeat == true)
+        {
+            scoreKeeper.Win();
+        }
     }
 }

@@ -21,6 +21,10 @@ public class BeatBlockScript : MonoBehaviour
         if(transform.position.z <= -2f)
         {
             scoreKeeper.lives -= 1;
+            if(finalBlock == true && scoreKeeper.lives > 0)
+            {
+                scoreKeeper.Win();
+            }
             Destroy(gameObject);
         }
     }
